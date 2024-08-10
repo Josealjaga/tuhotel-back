@@ -26,7 +26,7 @@ export const getHotelById = async (req, res) => {
       where: { id, isActive: true },
       include: [{
         model: Room,
-        as: 'rooms',
+        as: 'Rooms',
         
       }],
       order: [[{ model: Room, as: 'Rooms' }, 'codeName', 'ASC']], // Ordenar las habitaciones por codeName
