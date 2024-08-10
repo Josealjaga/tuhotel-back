@@ -29,7 +29,7 @@ export const getHotelById = async (req, res) => {
         as: 'rooms',
         
       }],
-      order: [[{ model: Room, as: 'rooms' }, 'codeName', 'ASC']], // Ordenar las habitaciones por codeName
+      order: [[{ model: Room, as: 'Rooms' }, 'codeName', 'ASC']], // Ordenar las habitaciones por codeName
     });
 
     if (!hotel) {
