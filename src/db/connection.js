@@ -20,17 +20,11 @@ const sequelize = new Sequelize(
   DB_USERNAME,
   DB_PASSWORD,
   {
-    dialect: 'mysql',
+    dialect: 'postgresql',
     host: DB_HOST,
     port: DB_PORT,
   },
 );
-
-const DB_MONGO_URI = process.env.DB_MONGO_URI;
-
-const mongo = mongoose.connect(DB_MONGO_URI, {
-  dbName: DB_DATABASE_NAME,
-});
 
 try {
   await sequelize.authenticate();
@@ -40,6 +34,5 @@ try {
 }
 
 export {
-  mongo,
   sequelize,
 }
