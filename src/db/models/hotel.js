@@ -42,12 +42,17 @@ const Hotel = sequelize.define(
       defaultValue: true,
     },
     bestPrice: {  
-      type: DataTypes.NUMBER,
+      type: DataTypes.DECIMAL,
       allowNull: true,
     },
   },
   {
     timestamps: true,
+  },
+  {
+  sequelize,
+  modelName: 'Hotel',
+  tableName: 'Hotel', 
   }
 );
 

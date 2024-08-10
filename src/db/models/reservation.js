@@ -23,7 +23,7 @@ const Reservation = sequelize.define(
       allowNull: false,
     },
     total: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
      UserId: {

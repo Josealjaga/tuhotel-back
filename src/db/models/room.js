@@ -23,7 +23,7 @@ const Room = sequelize.define(
       allowNull: true,
     },
     pricePerNight: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.DECIMAL,
       allowNull: false,
     },
     capacity: {
@@ -38,7 +38,7 @@ const Room = sequelize.define(
        type: DataTypes.STRING(36),
        allowNull: false,
        references: {
-         model: 'Hotel',
+         model: 'Hotels',
          key: 'id',
        },
      },
