@@ -4,7 +4,7 @@ import Hotel from './hotel.js';
 import Reservation from './reservation.js';
 
 // Definición de asociaciones
-Hotel.hasMany(Room, { foreignKey: 'hotelId', as: 'room' });
+Hotel.hasMany(Room, { foreignKey: 'hotelId', as: 'Rooms' });
 Room.belongsTo(Hotel, { foreignKey: 'hotelId', as: 'hotel' });
 
 User.hasMany(Reservation);

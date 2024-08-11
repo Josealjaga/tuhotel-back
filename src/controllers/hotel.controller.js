@@ -26,10 +26,10 @@ export const getHotelById = async (req, res) => {
       where: { id, isActive: true },
       include: [{
         model: Room,
-        as: 'room',
+        as: 'Rooms',
         
       }],
-      order: [[{ model: Room, as: 'room' }, 'codeName', 'ASC']], // Ordenar las habitaciones por codeName
+      order: [[{ model: Room, as: 'Rooms' }, 'codeName', 'ASC']], // Ordenar las habitaciones por codeName
     });
 
     if (!hotel) {
