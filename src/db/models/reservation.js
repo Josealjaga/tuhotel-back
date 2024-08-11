@@ -30,7 +30,7 @@ const Reservation = sequelize.define(
        type: DataTypes.STRING(36),
        allowNull: false,
        references: {
-         model: 'User',
+         model: 'Users',
          key: 'id',
          unique: false,
        },
@@ -39,7 +39,7 @@ const Reservation = sequelize.define(
        type: DataTypes.STRING(36),
        allowNull: false,
        references: {
-         model: 'Room',
+         model: 'Rooms',
          key: 'id',
          unique: false,
        },

@@ -34,14 +34,6 @@ const Room = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    hotelId: {
-       type: DataTypes.STRING(36),
-       allowNull: false,
-       references: {
-         model: 'Hotels',
-         key: 'id',
-       },
-     },
   },
   {
     timestamps: true,

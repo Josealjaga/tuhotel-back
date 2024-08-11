@@ -171,7 +171,7 @@ export const createRoom = async (req, res) => {
     await Room.create({
       id: uuid,
       ...req.body,
-      hotelId: hotelId,
+      HotelId: hotelId,
     });
 
     // Actualizar el bestPrice del hotel

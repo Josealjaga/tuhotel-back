@@ -4,8 +4,8 @@ import Hotel from './hotel.js';
 import Reservation from './reservation.js';
 
 // Definición de asociaciones
-Hotel.hasMany(Room, { foreignKey: 'hotelId', as: 'rooms' });
-Room.belongsTo(Hotel, { foreignKey: 'hotelId', as: 'hotel' });
+Hotel.hasMany(Room);
+Room.belongsTo(Hotel);
 
 User.hasMany(Reservation);
 Reservation.belongsTo(User);
@@ -32,7 +32,7 @@ Room.belongsToMany(User, {
 
   // Luego crea la tabla Room, que depende de Hotel
   await Room.sync({ 
-   //force: true 
+   force: true 
 });
 
   // Luego crea la tabla User
