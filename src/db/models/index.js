@@ -32,7 +32,7 @@ Room.belongsToMany(User, {
 
   // Luego crea la tabla Room, que depende de Hotel
   await Room.sync({ 
-   force: true 
+   //force: true 
 });
 
   // Luego crea la tabla User
