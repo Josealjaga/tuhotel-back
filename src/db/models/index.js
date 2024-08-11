@@ -4,7 +4,7 @@ import Hotel from './hotel.js';
 import Reservation from './reservation.js';
 
 // Definición de asociaciones
-Hotel.hasMany(Room, { foreignKey: 'hotelId', as: 'Rooms' });
+Hotel.hasMany(Room, { foreignKey: 'hotelId', as: 'rooms' });
 Room.belongsTo(Hotel, { foreignKey: 'hotelId', as: 'hotel' });
 
 User.hasMany(Reservation);
@@ -26,16 +26,24 @@ Room.belongsToMany(User, {
 // Sincronización de tablas en orden
 (async () => {
   // Primero crea la tabla Hotel
-  //await Hotel.sync({ force: true });
+  await Hotel.sync({ 
+   //force: true 
+});
 
   // Luego crea la tabla Room, que depende de Hotel
-   // await Room.sync({ force: true });
+  await Room.sync({ 
+   //force: true 
+});
 
   // Luego crea la tabla User
-  // await User.sync({ force: true });
+  await User.sync({ 
+   //force: true 
+});
 
   // Finalmente crea la tabla Reservation, que depende de User y Room
-  // await Reservation.sync({ force: true });
+  await Reservation.sync({ 
+   //force: true 
+});
 })();
 
 export { User, Room, Hotel, Reservation };
